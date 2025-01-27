@@ -1,23 +1,31 @@
 export default function Nav() {
-  return (
-    <nav>
-      <ul>
-        <li>
-          <a href="#">City</a>
-        </li>
-        <li>
-          <a href="#">Ninjago</a>
-        </li>
-        <li>
-          <a href="#">Castles and Knights</a>
-        </li>
-        <li>
-          <a href="#">Marine and Pirates</a>
-        </li>
-        <li>
-          <a href="#">Movie Characters</a>
-        </li>
-      </ul>
-    </nav>
+  const categories =[
+      {
+          id:1,
+          name: "City",
+      },
+      {
+          id:2,
+          name:"Ninjago",
+      },
+      {
+          id:3,
+          name:"Casties and Knight",
+      },
+      {
+          id:4,
+          name:"Marine and Pirats",
+      },
+      {
+          id:5,
+          name:"Movie Characters",
+      },
+  ];
+  return(
+      <nav>
+          <ul>
+              {categories.map(category=> <NavItems category={category} />)}
+          </ul>
+      </nav>
   );
 }
