@@ -24,7 +24,9 @@ export default function Nav() {
   return(
       <nav>
           <ul>
-              {categories.map(category=> <NavItems category={category} />)}
+              {categories.map(category=> (
+              <NavItems category={category.name} key={category.id} />
+              ))}
           </ul>
       </nav>
   );

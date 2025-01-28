@@ -3,8 +3,11 @@ import { products } from "./assets/legodudes";
 
 // Importerer komponenter som brukes i appen
 import Cart from "./components/Cart";
+
 import CategoryHeading from "./components/CategoryHeading";
-import Nav from "./components/Nav";
+
+import Header from "./components/Header";
+
 import ProductCard from "./components/ProductCard";
 
 // Importerer stilfilen for appen
@@ -12,6 +15,7 @@ import "./styles/style.css";
 
 // Definerer hovedkomponenten App
 function App() {
+  const[cartCount, setCarcount]= useState(0);
   return (
     <div id="content">
       {/* Legger til handlevogn-komponenten */}
